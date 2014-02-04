@@ -59,6 +59,8 @@ comprehension_without_row = [list(range(i,i+20)) for i in range(15)]
 
 #(0.8.6) Yes, 1-1 and onto
 #(0.8.7) No, not onto.  It can be made invertible by expanding the domain.
+#(0.8.8) Yes, g:R->R.  (or G:A->A where A is any subset of R.  I think the author meant f o g (x)).
+#(0.8.9) No, f o g (13) = f(g(13)) =f (21) = undefined
 
 ## 4: (Problem 0.8.10) Probability_1
 # f(x)=x+1, Domain={1,2,3,4,5,6}

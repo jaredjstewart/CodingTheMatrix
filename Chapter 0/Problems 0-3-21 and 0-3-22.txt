@@ -1,0 +1,11 @@
+Problem 0-3-21:
+Prove the Following Lemma: If f and g are invertible functions and f o g exists then f o g is invertible, and (f o g)^-1 = g^-1 o f^-1.
+
+Pf/ Let h = g^-1 o f^-1, and k = f o g.  Observe that k o h = id and h = k =id.
+ By definition of an inverse function, k is invertible with inverse h. QED
+
+Problem 0-3-22:
+False Assertion: Suppose f and g are functions and f o g is invertible.  Then f and g are invertible.
+Let A={1}, B={1,2}, C={1}.
+Define f:A->B by f(1)=1, g:B->C by g(1)=g(2)=1.  Then f o g is invertible, but f and g are not.  QED
+
