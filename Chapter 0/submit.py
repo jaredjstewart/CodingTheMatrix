@@ -16,7 +16,7 @@ import os, sys, doctest, traceback, urllib.request, urllib.parse, urllib.error, 
 
 SUBMIT_VERSION = '2.0'
 
-RECEIPT_DIR = os.path.join('.', 'receipts');
+RECEIPT_DIR = os.path.join('../', 'receipts');
 grader_url = 'edition1.gradingthematrix.appspot.com'
 static_url = 'edition1tests.codingthematrix.com'
 protocol = 'http'
@@ -379,7 +379,7 @@ def source(source_files, sid):
 def strip(s): return s.strip() if isinstance(s, str) else s
 
 if __name__ == '__main__':
-    with open("profile.txt") as f:
+    with open("../profile.txt") as f:
         try:
             profile = dict([line.split(maxsplit=1) for line in f])
         except IOError:

@@ -19,7 +19,7 @@ def tuple_sum(A, B):
     >>> tuple_sum([(1,2), (10,20)],[(3,4), (30,40)])
     [(4,6), (40,60)]
     '''
-    pass
+    return [(A[i][0]+B[i][0],A[i][1]+B[i][1]) for i in range(len(A))]
 
 
 
@@ -35,8 +35,7 @@ def inv_dict(d):
     >>> inv_dict({'thank you': 'merci', 'goodbye':  'au revoir'})
     {'merci':'thank you', 'au revoir':'goodbye'}]
     '''
-    pass
-
+    return {d[key]:key for key in d}
 
 
 ## 3: (Problem 0.8.5) Nested Comprehension
@@ -51,21 +50,34 @@ def row(p, n):
     >>> row(10,4)
     [10, 11, 12, 13]
     '''
-    pass
+    return list(range(p,p+n))
 
-comprehension_with_row = ...
+comprehension_with_row = [row(i,20) for i in range(15)]
 
-comprehension_without_row = ...
+comprehension_without_row = [list(range(i,i+20)) for i in range(15)]
+#Jared:What's wrong here??
 
-
+#(0.8.6) Yes, 1-1 and onto
+#(0.8.7) No, not onto.  It can be made invertible by expanding the domain.
 
 ## 4: (Problem 0.8.10) Probability_1
-Pr_f_is_even = ...
-Pr_f_is_odd  = ...
+# f(x)=x+1, Domain={1,2,3,4,5,6}
+# pr(1)=.5
+# pr(2)=.2
+# pr(3)=pr(5)=pr(6)=.1
+
+Pr_f_is_even = .5+.1+.1
+Pr_f_is_odd  = .2+.1
 
 
 
 ## 5: (Problem 0.8.11) Probability_2
-Pr_g_is_1    = ...
-Pr_g_is_0or2 = ...
+# {1,4,7} -> 1
+# {2,5} -> 2
+# {3,6} -> 3
+# pr(1)=pr(2)=pr(3)=.2
+# pr(4)=pr(5)=pr(6)=pr(7)=.1
+
+Pr_g_is_1    = .2+.1+.1
+Pr_g_is_0or2 = 1 - Pr_g_is_1
 
